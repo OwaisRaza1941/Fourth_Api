@@ -8,7 +8,7 @@ class StudentsControllers extends GetxController {
 
   getStudents() async {
     String url =
-        "https://crudcrud.com/api/c1ef90c724f04991a107cca1e2f9c56b/students";
+        "https://crudcrud.com/api/8aefc8aeaed5426a9b225763aea0790f/student";
     Uri uri = Uri.parse(url);
     var response = await http.get(uri);
     var rseponseBody = jsonDecode(response.body);
@@ -21,7 +21,7 @@ class StudentsControllers extends GetxController {
 
   postStudents({required Map<String, dynamic> data}) async {
     String url =
-        "https://crudcrud.com/api/c1ef90c724f04991a107cca1e2f9c56b/students";
+        "https://crudcrud.com/api/8aefc8aeaed5426a9b225763aea0790f/student";
     Uri uri = Uri.parse(url);
     var response = await http.post(
       uri,
@@ -41,7 +41,7 @@ class StudentsControllers extends GetxController {
 
   deleteStudent({required String id}) async {
     String url =
-        "https://crudcrud.com/api/c1ef90c724f04991a107cca1e2f9c56b/students/$id";
+        "https://crudcrud.com/api/8aefc8aeaed5426a9b225763aea0790f/student/$id";
     Uri uri = Uri.parse(url);
     final response = await http.delete(uri);
     print(response.body);
@@ -53,7 +53,7 @@ class StudentsControllers extends GetxController {
     required Map<String, dynamic> stdData,
   }) async {
     String url =
-        "https://crudcrud.com/api/c1ef90c724f04991a107cca1e2f9c56b/students/$id";
+        "https://crudcrud.com/api/8aefc8aeaed5426a9b225763aea0790f/student/$id";
     Uri uri = Uri.parse(url);
     final response = await http.put(
       uri,
